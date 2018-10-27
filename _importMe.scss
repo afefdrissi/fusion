@@ -1,0 +1,34 @@
+@mixin typography($name,$size,$weight,$color,$spacing,$lineheight,$textalign){
+    // @include typography($name,$size,$weight,$color,$spacing,$lineheight,$textalign);
+    $props: (font-family:font($name),font-size:$size,font-weight:$weight,
+    color:color($color),letter-spacing:$spacing,line-height:$lineheight,text-align:$textalign);
+    @each $key,$value in $props {
+        @if $value !=_{ 
+            #{$key}:$value;
+        }
+      }    
+   }
+
+   @mixin flex($direction,$justify,$alignc,$aligni,$wrap){
+    //@include flex($direction,$justify,$alignc,$aligni,$wrap);
+    display:flex;
+    $props: (flex-direction:$direction,justify-content:$justify,align-content:$alignc,
+    align-items:$aligni,flex-wrap:$wrap);
+    @each $key,$value in $props {
+        @if $value !=_{ 
+            #{$key}:$value;
+        }
+      }
+  }
+@mixin box($width,$height,$bgc,$bgi,$radius){
+//@include box($width,$height,$bgc,$bgi,$radius);   
+$props:(width:$width,height:$height,background-color:color($bgc),
+background-image:image($bgi),border-radius:$radius);
+    @each $key,$value in $props {
+        @if $value !=_ { 
+            #{$key}:$value;
+        }
+      }
+}
+
+  

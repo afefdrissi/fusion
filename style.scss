@@ -1,0 +1,205 @@
+@import 'theme';
+@import 'visuals';
+*,
+:before,
+:after {
+          box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+body{
+@include typography(primary,12pt,_,neutre,_,17pt,_);
+background-color: color(dark);
+margin:0;
+
+}
+///////fixed
+.logo{
+    @include typography(accent,26px,_,primary,2pt,_,_);
+    position: fixed;
+    top:40px;
+    left:40px;
+}
+.main-nav{
+    position: fixed;
+    top:40px;
+    right: 40px;
+    @include flex(column,_,_,flex-end,_);
+
+      #menu-icon{
+            //border: 1px solid color(primary);
+            //padding: 8px;
+            content:url(assets/menu-icon.png);
+            margin-bottom: 14px;
+              
+      }
+      a:not(:first-child){
+        display: none;
+        @include typography(primary,14px,_,primary,1pt,_,right);
+        padding:8px 0 8px 0;
+      }
+
+    }
+/////////////////////////////////
+////////
+section{
+min-height: 100vh;
+width:100vw;
+.vertical-line{
+@include line(80px,_,primary);//vertical-line
+margin:auto;
+}}
+.section-title{
+@include typography(primary,14px,_,primary,_,_,center);
+  }
+#home-page{
+    background-image:image(home-page);
+    .header-box{
+        width: 460px;
+        padding:18px;
+        border: 1px solid color(neutre);
+    }
+    ul{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0px;
+
+    li{
+      padding:0px 8px 0px 8px;
+      border-right: 2px solid #f7ac53;
+      &:last-child{
+        border:none;
+      }
+    }
+  }
+  .arrow-down{
+        position: absolute;
+        top:80vh;
+        height: 12px;
+        &:after{
+            content:url(assets/arrow-down.png);
+  }}
+ 
+}
+#services{
+    .services{
+    
+        @include flex(_,flex-start,_,_,wrap);
+    h3{
+        text-align: left;
+    }
+    div{
+        padding: 0px 0px 0px 40px;
+        width: 260px;
+    }
+
+    }
+}
+#projects{
+    .project{
+        position: absolute;
+        left:15% ;
+        @include typography(accent,24px,_,lighter,1px,_,_);
+        text-shadow: 0px 0px 4px rgb(22, 22, 22);
+        .vertical-line{
+            margin-left: 0;
+        }
+
+      }
+      .project-details{
+
+        position: absolute;
+        width:160px;
+        right:12%; 
+        margin-top:25%;
+        }
+      .project-img{
+        width: 660px;
+        height:438px;}
+}
+#testimonials{
+    .testimonial{ 
+      .testimonial-img{
+        height: 74px;
+        width: 74px;
+        background: color(lighter);
+      }
+      q{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+        width:500px;
+        height: 300px;
+        @include flex(column,space-between ,center,center ,_);
+        padding-bottom:40px;
+        padding-left:20px;
+        padding-right:20px;
+        background-color: color(darker);
+        text-align: center;
+      }
+nav{
+    justify-self: center;
+}    
+}
+#team{
+    .teamdiv{  
+        overflow: hidden;
+        max-width: 800px;
+    .team{
+      display: flex; 
+     padding: 0px;
+     margin: 0 -1px -1px 0;
+      // Hide superfluous border
+      list-style: none;
+      .team-member{
+        flex:1 0 200px;
+        height: 180px;
+        width: 200px;
+        border-right: 1px solid #3d3d3d;
+        border-bottom: 1px solid #3d3d3d;
+        
+    
+        &:empty {
+          height: 0;
+          border: none;
+        
+
+        }
+        .tmp{
+            height: 74px;
+            width: 74px;
+            border-radius: 50%;
+            margin:26px auto 20px auto ;
+            background-color: rgb(87, 87, 87);
+          }
+          h5,h6{
+              text-align: center;
+          }
+      }
+      
+
+    }}
+}
+#contact{
+    form{
+        padding: 20px;
+        background-color: color(darker);
+
+    }
+}
+#projects,#home-page{
+@include flex(column,center,_,center,_);
+}
+#projects,#team{
+    background-color: color(darker);
+}
+#contact,#team,#services,#testimonials{
+@include flex(column,space-between,center,center,_);
+padding-bottom: 15vh;
+
+}
+
+

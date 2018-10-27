@@ -1,0 +1,52 @@
+@import 'importMe';
+$colors :(
+  primary:#f7ac53,
+  //accent:#53f7b8,
+  lighter:#fff,
+  light:#e0e0e0,
+  neutre:#afafaf,
+  dark:#1f1f1f,
+  darker:#131212
+);
+@function color($color-name){
+  @return map-get($colors,$color-name)
+}
+$fonts:(
+  primary:'open sans',
+  accent:'Merriweather'
+);
+@function font($font-name){
+  @return map-get($fonts,$font-name)
+}
+$images:(
+  home-page:url("assets/butterfly.png")
+);
+@function image($image-url){
+  @return map-get($images,$image-url)
+}
+
+h1{
+  @include typography(accent,26px,_,lighter,2pt,30pt,center);
+  span{
+      color:color(primary);
+  }
+  }
+  h3{
+  @include typography(accent,16px,_,lighter,1pt,_,center);
+  width: 25vw;
+  }
+  h4{
+      @include typography(primary,16px,_,primary,1px,_,_);
+      margin: 0px;
+      margin-bottom:4px;
+  }
+  h5{
+      @include typography(primary,14px,normal,_,1px,_,_);
+      margin: 0px;
+      margin-bottom:4px;
+  }
+  h6{
+      @include typography(primary,14px,normal,primary,1px,_,_);
+      margin: 0px;
+      margin-bottom:4px;
+  }

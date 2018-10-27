@@ -1,0 +1,114 @@
+@mixin line($height,$width,$color){
+//@include line($height,_,$color);//vertical-line
+//@include line(_,$width,$color);//horizontal-line
+    border-right: 1px solid color($color);
+    @if $width==_{
+        height:$height;
+        width: 1px;
+    } 
+    @else { 
+        height: 1px;
+        width: $width;}
+}
+@mixin arrow($direction){
+
+    height: 12px;
+    &:after{
+      content:"   " url(arrow-down.png);
+    }
+}
+.link-arrow{
+    
+  &:after{
+    margin: 20px;
+    content:url(assets/arrow-right.png);
+  }
+}
+.slider{
+    display: grid;
+}
+.slid-button{
+    display:inline-block;
+    margin: 8px;
+    background: #383838;
+    border: none;
+    cursor: pointer;
+    height: 6px;
+    width: 36px;
+}
+.slids-container{
+    margin-bottom: 20px;
+}
+.current-slid-button{
+    background: #d25b16;
+
+}
+.slid{
+    display: none;
+    background: #c5c5c5;
+    box-sizing: border-box;
+}
+.current-slid{
+    display:block;
+}
+
+.group 			  { 
+    
+    position:relative;
+    margin:40px;
+  }
+  input,textarea	{
+    width: 100%;
+    font-size:18px;
+    color: inherit;
+    padding:10px 0px 10px 0px;
+    display:block;
+    border:none;
+    background: inherit;
+    border-bottom:1px solid #f7ac53;
+
+    }
+  
+  input,textarea {
+      &:focus{outline:none; }
+      
+    }
+  
+  /* LABEL ======================================= */
+  label 				 {
+  
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  textarea,input{
+    &:focus~ label,&:valid~ label {
+    top:-20px;
+    left:-2px;
+    font-size:14px;
+    color:#f7ac53;}
+
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:300px; }
+  .bar{
+    height:2px; 
+    width:0;
+    background:#f7ac53; 
+    transition:0.4s ease all; 
+    -moz-transition:0.4s ease all; 
+    -webkit-transition:0.4s ease all;
+  }
+  input,textarea{
+      &:focus~.bar {
+    width:100%;
+  }}

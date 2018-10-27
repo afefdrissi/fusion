@@ -1,0 +1,443 @@
+h1 {
+  font-family: "Merriweather";
+  font-size: 26px;
+  color: #fff;
+  letter-spacing: 2pt;
+  line-height: 30pt;
+  text-align: center;
+}
+
+h1 span {
+  color: #f7ac53;
+}
+
+h3 {
+  font-family: "Merriweather";
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1pt;
+  text-align: center;
+  width: 25vw;
+}
+
+h4 {
+  font-family: "open sans";
+  font-size: 16px;
+  color: #f7ac53;
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+h5 {
+  font-family: "open sans";
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+h6 {
+  font-family: "open sans";
+  font-size: 14px;
+  font-weight: normal;
+  color: #f7ac53;
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.link-arrow:after {
+  margin: 20px;
+  content: url(assets/arrow-right.png);
+}
+
+.slider {
+  display: -ms-grid;
+  display: grid;
+}
+
+.slid-button {
+  display: inline-block;
+  margin: 8px;
+  background: #383838;
+  border: none;
+  cursor: pointer;
+  height: 6px;
+  width: 36px;
+}
+
+.slids-container {
+  margin-bottom: 20px;
+}
+
+.current-slid-button {
+  background: #d25b16;
+}
+
+.slid {
+  display: none;
+  background: #c5c5c5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.current-slid {
+  display: block;
+}
+
+.group {
+  position: relative;
+  margin: 40px;
+}
+
+input, textarea {
+  width: 100%;
+  font-size: 18px;
+  color: inherit;
+  padding: 10px 0px 10px 0px;
+  display: block;
+  border: none;
+  background: inherit;
+  border-bottom: 1px solid #f7ac53;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+textarea:focus ~ label, textarea:valid ~ label, input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  left: -2px;
+  font-size: 14px;
+  color: #f7ac53;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar {
+  height: 2px;
+  width: 0;
+  background: #f7ac53;
+  transition: 0.4s ease all;
+  -moz-transition: 0.4s ease all;
+  -webkit-transition: 0.4s ease all;
+}
+
+input:focus ~ .bar, textarea:focus ~ .bar {
+  width: 100%;
+}
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "open sans";
+  font-size: 12pt;
+  color: #afafaf;
+  line-height: 17pt;
+  background-color: #1f1f1f;
+  margin: 0;
+}
+
+.logo {
+  font-family: "Merriweather";
+  font-size: 26px;
+  color: #f7ac53;
+  letter-spacing: 2pt;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+}
+
+.main-nav {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main-nav #menu-icon {
+  content: url(assets/menu-icon.png);
+  margin-bottom: 14px;
+}
+
+.main-nav a:not(:first-child) {
+  display: none;
+  font-family: "open sans";
+  font-size: 14px;
+  color: #f7ac53;
+  letter-spacing: 1pt;
+  text-align: right;
+  padding: 8px 0 8px 0;
+}
+
+section {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+section .vertical-line {
+  border-right: 1px solid #f7ac53;
+  height: 80px;
+  width: 1px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: "open sans";
+  font-size: 14px;
+  color: #f7ac53;
+  text-align: center;
+}
+
+#home-page {
+  background-image: url("assets/butterfly.png");
+}
+
+#home-page .header-box {
+  width: 460px;
+  padding: 18px;
+  border: 1px solid #afafaf;
+}
+
+#home-page ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+#home-page ul li {
+  padding: 0px 8px 0px 8px;
+  border-right: 2px solid #f7ac53;
+}
+
+#home-page ul li:last-child {
+  border: none;
+}
+
+#home-page .arrow-down {
+  position: absolute;
+  top: 80vh;
+  height: 12px;
+}
+
+#home-page .arrow-down:after {
+  content: url(assets/arrow-down.png);
+}
+
+#services .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#services .services h3 {
+  text-align: left;
+}
+
+#services .services div {
+  padding: 0px 0px 0px 40px;
+  width: 260px;
+}
+
+#projects .project {
+  position: absolute;
+  left: 15%;
+  font-family: "Merriweather";
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 4px #161616;
+}
+
+#projects .project .vertical-line {
+  margin-left: 0;
+}
+
+#projects .project-details {
+  position: absolute;
+  width: 160px;
+  right: 12%;
+  margin-top: 25%;
+}
+
+#projects .project-img {
+  width: 660px;
+  height: 438px;
+}
+
+#testimonials .testimonial {
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #131212;
+  text-align: center;
+}
+
+#testimonials .testimonial .testimonial-img {
+  height: 74px;
+  width: 74px;
+  background: #fff;
+}
+
+#testimonials .testimonial q {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#testimonials nav {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+#team .teamdiv {
+  overflow: hidden;
+  max-width: 800px;
+}
+
+#team .teamdiv .team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  margin: 0 -1px -1px 0;
+  list-style: none;
+}
+
+#team .teamdiv .team .team-member {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  height: 180px;
+  width: 200px;
+  border-right: 1px solid #3d3d3d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+#team .teamdiv .team .team-member:empty {
+  height: 0;
+  border: none;
+}
+
+#team .teamdiv .team .team-member .tmp {
+  height: 74px;
+  width: 74px;
+  border-radius: 50%;
+  margin: 26px auto 20px auto;
+  background-color: #575757;
+}
+
+#team .teamdiv .team .team-member h5, #team .teamdiv .team .team-member h6 {
+  text-align: center;
+}
+
+#contact form {
+  padding: 20px;
+  background-color: #131212;
+}
+
+#projects, #home-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects, #team {
+  background-color: #131212;
+}
+
+#contact, #team, #services, #testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15vh;
+}
+/*# sourceMappingURL=style.css.map */
