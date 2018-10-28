@@ -35,6 +35,10 @@ h1{
     @include typography(accent,22px,_,lighter,1pt,30pt,center);
     width: 450px;
     margin:40px;
+    @include mq('tablet-small',max) {
+      width: 240px;
+  
+  }
   }
   h4{
       @include typography(primary,16px,_,primary,1px,_,_);

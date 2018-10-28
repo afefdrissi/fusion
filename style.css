@@ -22,6 +22,12 @@ h3 {
   margin: 40px;
 }
 
+@media only screen and (max-width: 639px) {
+  h3 {
+    width: 240px;
+  }
+}
+
 h4 {
   font-family: "open sans";
   font-size: 16px;
@@ -216,11 +222,23 @@ section {
   width: 100vw;
 }
 
+@media only screen and (min-height: 1024px) {
+  section {
+    min-height: 700px;
+  }
+}
+
 section .vertical-line {
   border-right: 1px solid #f7ac53;
   height: 80px;
   width: 1px;
   margin: auto;
+}
+
+@media only screen and (max-width: 639px) {
+  section .vertical-line {
+    display: none;
+  }
 }
 
 .section-title {
@@ -240,6 +258,12 @@ section .vertical-line {
   width: 460px;
   padding: 18px;
   border: 1px solid #c9c9c9;
+}
+
+@media only screen and (max-width: 639px) {
+  #home-page .header-box {
+    width: 240px;
+  }
 }
 
 #home-page ul {
@@ -265,8 +289,14 @@ section .vertical-line {
 
 #home-page .arrow-down {
   position: absolute;
-  top: 80vh;
+  top: 75vh;
   height: 12px;
+}
+
+@media only screen and (min-height: 1024px) {
+  #home-page .arrow-down {
+    top: 90vh;
+  }
 }
 
 #home-page .arrow-down:after {
@@ -292,7 +322,7 @@ section .vertical-line {
 }
 
 #services .services div {
-  padding: 0px 0px 0px 40px;
+  margin: 0px 0px 0px 60px;
   width: 260px;
 }
 
@@ -306,20 +336,62 @@ section .vertical-line {
   text-shadow: 0px 0px 4px #161616;
 }
 
+@media only screen and (max-width: 639px) {
+  #projects .project {
+    position: relative;
+    left: 0px;
+    bottom: 20px;
+  }
+}
+
 #projects .project .vertical-line {
   margin-left: 0;
+}
+
+@media only screen and (max-width: 639px) {
+  #projects .project .vertical-line {
+    display: none;
+  }
 }
 
 #projects .project-details {
   position: absolute;
   width: 160px;
-  right: 12%;
+  right: 9%;
   margin-top: 25%;
+}
+
+@media only screen and (min-width: 1440px) {
+  #projects .project-details {
+    right: 12%;
+    margin-top: 25%;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #projects .project-details {
+    right: 5%;
+    margin-top: 85%;
+  }
 }
 
 #projects .project-img {
   width: 660px;
   height: 438px;
+}
+
+@media only screen and (max-width: 639px) {
+  #projects .project-img {
+    width: 340px;
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #projects .project-img {
+    width: 1040px;
+    height: 650px;
+  }
 }
 
 #testimonials .testimonial {
@@ -355,6 +427,13 @@ section .vertical-line {
 
 #testimonials .testimonial q {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 639px) {
+  #testimonials .testimonial {
+    width: 240px;
+    height: 400px;
+  }
 }
 
 #testimonials nav {
@@ -466,6 +545,12 @@ section .vertical-line {
 @media only screen and (min-width: 1440px) {
   #contact, #team, #services, #testimonials {
     padding-bottom: 30vh;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  #contact, #team, #services, #testimonials {
+    padding-top: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
