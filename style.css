@@ -80,7 +80,6 @@ h6 {
 
 .slid {
   display: none;
-  background: #c5c5c5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -165,7 +164,7 @@ a {
 body {
   font-family: "open sans";
   font-size: 12pt;
-  color: #afafaf;
+  color: #c9c9c9;
   line-height: 17pt;
   background-color: #1f1f1f;
   margin: 0;
@@ -240,7 +239,7 @@ section .vertical-line {
 #home-page .header-box {
   width: 460px;
   padding: 18px;
-  border: 1px solid #afafaf;
+  border: 1px solid #c9c9c9;
 }
 
 #home-page ul {
@@ -288,7 +287,8 @@ section .vertical-line {
 #services .services h3 {
   font-size: 18px;
   text-align: left;
-  margin: 0px;
+  margin-left: 0px;
+  width: 160px;
 }
 
 #services .services div {
@@ -410,6 +410,20 @@ section .vertical-line {
   background-color: #131212;
 }
 
+#contact .footer {
+  margin-top: 20px;
+}
+
+#contact .footer > div {
+  margin: 30px;
+  display: inline-block;
+}
+
+#contact .footer > div img {
+  margin-top: 26px;
+  margin-right: 8px;
+}
+
 #projects, #home-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,5 +461,11 @@ section .vertical-line {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15vh;
+}
+
+@media only screen and (min-width: 1440px) {
+  #contact, #team, #services, #testimonials {
+    padding-bottom: 30vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
