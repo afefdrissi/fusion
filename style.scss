@@ -96,7 +96,10 @@ margin:auto;
         top:75vh;
         height: 12px;
         @include mqh('tablet-wide') {
-            top:90vh;
+            top:92vh;
+        }
+        @include mqh('desktop') {
+       display: none;
         }
         &:after{
             content:url(assets/arrow-down.png);

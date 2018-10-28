@@ -295,7 +295,13 @@ section .vertical-line {
 
 @media only screen and (min-height: 1024px) {
   #home-page .arrow-down {
-    top: 90vh;
+    top: 92vh;
+  }
+}
+
+@media only screen and (min-height: 1248px) {
+  #home-page .arrow-down {
+    display: none;
   }
 }
 
