@@ -226,8 +226,10 @@ section .vertical-line {
 
 .section-title {
   font-family: "open sans";
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: bold;
   color: #f7ac53;
+  letter-spacing: 1pt;
   text-align: center;
 }
 
@@ -284,7 +286,9 @@ section .vertical-line {
 }
 
 #services .services h3 {
+  font-size: 18px;
   text-align: left;
+  margin: 0px;
 }
 
 #services .services div {

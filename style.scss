@@ -52,7 +52,7 @@ width:100vw;
 margin:auto;
 }}
 .section-title{
-@include typography(primary,14px,_,primary,_,_,center);
+@include typography(primary,13px,bold,primary,1pt,_,center);
   }
 #home-page{
     background-image:image(home-page);
@@ -90,7 +90,10 @@ margin:auto;
     
         @include flex(_,flex-start,_,_,wrap);
     h3{
+        font-size: 18px;
         text-align: left;
+        margin:0px;
+    
     }
     div{
         padding: 0px 0px 0px 40px;
