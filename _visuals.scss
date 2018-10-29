@@ -111,3 +111,9 @@
       &:focus~.bar {
     width:100%;
   }}
+  input[type=submit]{
+    font-weight: bold;
+    background: #f7ac53;
+    color: #161616;
+    
+  }
