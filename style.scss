@@ -10,28 +10,39 @@ a{
     color:inherit;
 }
 body{
+
 @include typography(primary,12pt,_,neutre,_,17pt,_);
 background-color: color(dark);
 margin:0;
-
+overflow-x: hidden;
 
 }
 ///////fixed
 .logo{
     @include typography(accent,26px,_,primary,2pt,_,_);
     position: fixed;
+    z-index: 1000;
     top:40px;
     left:40px;
 }
 .main-nav{
-    position: fixed;
-    top:40px;
-    right: 40px;
+
+    position: fixed;padding: 40px;z-index: 999;padding-bottom: 50px;
+    ///////
+top:0;right: 0;
+    width: 100vw;
+    
+    background: #000000;  
+
+
+    /////////
+
     @include flex(column,_,_,flex-end,_);
 
       #menu-icon{
             //border: 1px solid color(primary);
             //padding: 8px;
+            cursor: pointer;
             content:url(assets/menu-icon.png);
             margin-bottom: 14px;
               
@@ -46,6 +57,9 @@ margin:0;
 /////////////////////////////////
 ////////
 section{
+    >div:first-child:not(.slider){
+        z-index: 1000;
+    }
 min-height: 100vh;
 width:100vw;
 @include mqh('tablet-wide') {

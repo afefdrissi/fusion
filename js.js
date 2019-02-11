@@ -1,7 +1,7 @@
 ///////////menu
 $("#menu-icon").click(function(){
 if ($(this).data( "stat" )=="closed"){
-        $(this).parent().find("a:not(:first-child)").fadeIn().slideDown();
+        $(this).parent().find("a:not(:first-child)").fadeIn();
         $(this).data( "stat","open");
 }
 else{
@@ -11,7 +11,9 @@ else{
 }
 
 }
+
 );
+
 /////////slider
 $(document).ready(function(){
         $(".slid-button").click(function(){
@@ -28,6 +30,8 @@ $(document).ready(function(){
 
 //////////////smooth scroll
 $('a[href*=#]:not([href=#])').click(function() {
+    $("#menu-icon").data( "stat","closed");
+    $("#menu-icon").parent().find("a:not(:first-child)").fadeOut();
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
             || location.hostname == this.hostname) {
     
@@ -40,4 +44,5 @@ $('a[href*=#]:not([href=#])').click(function() {
                 return false;
             }
         }
+        
     });

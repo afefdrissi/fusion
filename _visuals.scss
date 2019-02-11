@@ -115,5 +115,8 @@
     font-weight: bold;
     background: #f7ac53;
     color: #161616;
+    &:active{
+    background: #fdc074;
+    }
     
   }
